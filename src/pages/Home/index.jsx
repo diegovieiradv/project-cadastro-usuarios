@@ -8,11 +8,11 @@ import {
   Form,
   ContainerInputs,
   Input,
-  Button,
   InputLabel,
 } from "./styles";
 
 import UsersImage from "../../assets/users.png";
+import Button from "../../components/Button";
 
 
 
