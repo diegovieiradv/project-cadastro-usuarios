@@ -7,6 +7,6 @@ import router from "./routes.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <GlobalStyles />
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </StrictMode>
 );
