@@ -1,10 +1,7 @@
-import { Button } from "./styles"
+import { Button } from "./styles";
 
-function DefaultButton(){
-
-return (
-    <Button>OK OK</Button>
-)
+function DefaultButton({ children, ...props }) {
+  return <Button {...props}>{children}</Button>;
 }
 
-export default DefaultButton
+export default DefaultButton;

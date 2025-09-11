@@ -4,37 +4,32 @@ import api from "../../services/api.js";
 import {
   Title,
   Container,
-  TopBackground,
   Form,
   ContainerInputs,
   Input,
   InputLabel,
 } from "./styles";
 
-import UsersImage from "../../assets/users.png";
 import Button from "../../components/Button";
-
-
+import TopBackground from "../../components/TopBackground/index.jsx";
 
 function Home() {
   const inputName = useRef();
   const inputAge = useRef();
   const inputEmail = useRef();
 
- async function registerNewUser() {
-  const data = await api.post("/usuarios", {
-    name: inputName.current.value,
-    age: parseInt (inputAge.current.value),
-    email: inputEmail.current.value
-  });
-  console.log(data);
-}
+  async function registerNewUser() {
+    const data = await api.post("/usuarios", {
+      name: inputName.current.value,
+      age: parseInt(inputAge.current.value),
+      email: inputEmail.current.value,
+    });
+    console.log(data);
+  }
 
   return (
     <Container>
-      <TopBackground>
-        <img src={UsersImage} alt="Logo do site" />
-      </TopBackground>
+      <TopBackground />
       <Form>
         <Title>Cadastrar Usuário</Title>
         <ContainerInputs>
