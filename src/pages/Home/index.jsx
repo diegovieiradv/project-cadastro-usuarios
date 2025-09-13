@@ -67,9 +67,9 @@ function Home() {
           Cadastrar Usuário
         </Button>
       </Form>
-       <Button type="button" onClick={() => navigate("/lista-de-usuarios")}>
-          Ver Usuários Cadastrados
-        </Button>
+      <Button type="button" onClick={() => navigate("/lista-de-usuarios")}>
+        Ver Usuários Cadastrados
+      </Button>
     </Container>
   );
 }
