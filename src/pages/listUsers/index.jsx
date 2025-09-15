@@ -11,6 +11,7 @@ import {
   TrashIcon,
   DeleteUser,
 } from "./styles.js";
+import Trash from "../../assets/trash.svg";
 
 function ListUsers() {
   const [users, setUsers] = useState([]);
@@ -35,11 +36,15 @@ function ListUsers() {
               src={`https://avatar.iran.liara.run/public?username=${user.id}`}
             />
             <div>
-              <p>{user.name}</p>
-              <p>{user.email}</p>
+              <h3>{user.name}</h3>
               <p>{user.age}</p>
+              <p>{user.email}</p>
             </div>
-            <TrashIcon onClick={() => DeleteUser(user.id)} />
+            <TrashIcon
+              src={Trash}
+              alt="Lixeira"
+              onClick={() => DeleteUser(user.id)}
+            />
           </CardUsers>
         ))}
       </ContainerUsers>
