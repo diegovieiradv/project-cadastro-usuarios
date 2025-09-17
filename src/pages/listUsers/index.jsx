@@ -9,7 +9,7 @@ import {
   CardUsers,
   AvatarUser,
   TrashIcon,
-  DeleteUser,
+  DeleteUsers,
 } from "./styles.js";
 import Trash from "../../assets/trash.svg";
 
@@ -25,6 +25,13 @@ function ListUsers() {
   }, []);
 
   const navigate = useNavigate();
+
+  async function DeleteUsers(id) {
+    await Api.delete(`/usuarios/${id}`);
+    const filteredUsers = users.filter((user) => user.id !== id);
+    setUsers(filteredUsers);
+  }
+
   return (
     <Container>
       <TopBackground />
@@ -43,7 +50,7 @@ function ListUsers() {
             <TrashIcon
               src={Trash}
               alt="Lixeira"
-              onClick={() => DeleteUser(user.id)}
+              onClick={() => DeleteUsers(user.id)}
             />
           </CardUsers>
         ))}

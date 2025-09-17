@@ -35,10 +35,11 @@ export const CardUsers = styled.div`
   gap: 20px;
   background-color: #fff;
   padding: 16px;
+  justify-content: space-between;
   border-radius: 32px;
   margin-bottom: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  max-width: 360px;
+  max-width: 380px;
 
   h3 {
     font-size: 24px;
@@ -73,4 +74,4 @@ export const TrashIcon = styled.img`
   }
 `;
 
-export const DeleteUser = styled.button``;
+export const DeleteUsers = styled.button``;
